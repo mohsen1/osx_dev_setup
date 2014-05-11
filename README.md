@@ -25,6 +25,13 @@ brew install fish
 brew install vim
 brew install vifm
 ```
+Install [QuickLook plugins](https://github.com/sindresorhus/quick-look-plugins)
+
+``` bash
+brew tap caskroom/cask
+brew install brew-cask
+brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql webp-quicklook suspicious-package
+```
 
 ### Add public keys to Github
 
