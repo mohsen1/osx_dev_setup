@@ -20,7 +20,7 @@ This is how I setup an OSX machine for devlopment. This is mainly a reminder for
 
 ```bash
 brew install git node
-brew install -g grunt-cli bower
+npm install -g grunt-cli bower
 brew install fish
 brew install vim
 brew install vifm
