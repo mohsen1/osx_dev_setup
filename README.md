@@ -45,3 +45,9 @@ make
 cd .. & rm -rf .vim
 ```
 
+### Git stuff
+
+```
+# checkout pull requests
+git config --global --add remote.origin.fetch "+refs/pull/*/head:refs/remotes/origin/pr/*"
+```
