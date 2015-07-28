@@ -6,7 +6,7 @@ This is how I setup an OSX machine for devlopment. This is mainly a reminder for
 ## Essensial Apps
 * [Google Chrome](https://www.google.com/intl/en_us/chrome/browser/)
 * [iTerm2](www.iterm2.com/)
-* [Homebrew](brew.sh) `ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"`
+* [Homebrew](brew.sh) `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 * [Caffiene](http://lightheadsw.com/caffeine/)
 * [Google Drive](https://tools.google.com/dlpage/drive/?hl=en)
 * [Google Hangouts Chrome Plugin](https://www.google.com/tools/dlpage/hangoutplugin)
