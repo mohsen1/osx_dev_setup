@@ -16,6 +16,7 @@ This is how I setup an OSX machine for devlopment. This is mainly a reminder for
 * XCode
 * [Spotify](https://www.spotify.com/us/)
 
+
 ## CLI Essensials
 
 ```bash
@@ -24,7 +25,12 @@ npm install -g grunt-cli bower
 brew install fish
 brew install vim
 brew install vifm
+brew install gnu-sed
+brew install node
 ```
+
+[Diff So Fancy](https://github.com/so-fancy/diff-so-fancy)
+
 Install [QuickLook plugins](https://github.com/sindresorhus/quick-look-plugins)
 
 ``` bash
