@@ -31,6 +31,12 @@ brew install node
 
 [Diff So Fancy](https://github.com/so-fancy/diff-so-fancy)
 
+[Oh my fish](https://github.com/oh-my-fish/oh-my-fish)
+
+[Powerline fonts](https://github.com/powerline/fonts)
+[Shellder prompt](https://github.com/simnalamburt/shellder)
+[More awesome fish](https://github.com/bucaran/awesome-fish)
+
 Install [QuickLook plugins](https://github.com/sindresorhus/quick-look-plugins)
 
 ``` bash
