@@ -21,12 +21,10 @@ This is how I setup an OSX machine for devlopment. This is mainly a reminder for
 
 ```bash
 brew install git node
-npm install -g grunt-cli bower
 brew install fish
 brew install vim
 brew install vifm
 brew install gnu-sed
-brew install node
 ```
 
 [Diff So Fancy](https://github.com/so-fancy/diff-so-fancy)
@@ -34,7 +32,9 @@ brew install node
 [Oh my fish](https://github.com/oh-my-fish/oh-my-fish)
 
 [Powerline fonts](https://github.com/powerline/fonts)
+
 [Shellder prompt](https://github.com/simnalamburt/shellder)
+
 [More awesome fish](https://github.com/bucaran/awesome-fish)
 
 Install [QuickLook plugins](https://github.com/sindresorhus/quick-look-plugins)
