@@ -31,7 +31,7 @@ brew install gnu-sed
 
 [Oh my fish](https://github.com/oh-my-fish/oh-my-fish)
 
-[Powerline](https://powerline.readthedocs.org/en/latest/installation.html)
+[Powerline](https://github.com/oh-my-fish/theme-bobthefish)
 
 [Powerline fonts](https://github.com/powerline/fonts)
 
