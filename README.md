@@ -31,6 +31,8 @@ brew install gnu-sed
 
 [Oh my fish](https://github.com/oh-my-fish/oh-my-fish)
 
+[Powerline](https://powerline.readthedocs.org/en/latest/installation.html)
+
 [Powerline fonts](https://github.com/powerline/fonts)
 
 [Shellder prompt](https://github.com/simnalamburt/shellder)
