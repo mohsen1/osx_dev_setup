@@ -39,6 +39,8 @@ brew install gnu-sed
 
 [More awesome fish](https://github.com/bucaran/awesome-fish)
 
+[FZF](https://github.com/junegunn/fzf)
+
 Install [QuickLook plugins](https://github.com/sindresorhus/quick-look-plugins)
 
 ``` bash
