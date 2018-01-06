@@ -26,7 +26,7 @@ brww install gnupg
 brww install yarn 
 brew install fzf
 brew install fd
-brew install diff-so-fncy 
+brew install diff-so-fancy 
 ```
 
 Change shell to fish 
@@ -80,5 +80,5 @@ git config --global --add remote.origin.fetch "+refs/pull/*/head:refs/remotes/or
 
 *A better `git l`*
 ```
-git config --global alias.l "git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+git config --global alias.l "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 ```
