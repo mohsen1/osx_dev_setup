@@ -4,6 +4,7 @@ This is how I setup an OSX machine for devlopment. This is mainly a reminder for
 
 
 ## Essensial Apps
+* [Code](https://code.visualstudio.com)
 * [iTerm2](http://www.iterm2.com/)
 * [Homebrew](brew.sh) `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 * [Caffiene](http://lightheadsw.com/caffeine/)
