@@ -16,11 +16,16 @@ This is how I setup an OSX machine for devlopment. This is mainly a reminder for
 ## CLI Essensials
 
 ```bash
-brew install git node
+brew install git
 brew install fish
 brew install vim
 brew install vifm
 brew install gnu-sed
+brww install gnupg
+brww install yarn 
+brew install fzf
+brew install fd
+brew install diff-so-fncy 
 ```
 
 Change shell to fish 
@@ -28,6 +33,8 @@ Change shell to fish
 sudo `which fish` >> /etc/shells
 chsh -s `which fish`
 ```
+
+[fd](https://github.com/junegunn/fzf#respecting-gitignore)
 
 [Diff So Fancy](https://github.com/so-fancy/diff-so-fancy)
 
@@ -39,13 +46,11 @@ chsh -s `which fish`
 
 [Powerline fonts](https://github.com/powerline/fonts)
 
-[Shellder prompt](https://github.com/simnalamburt/shellder)
-
 [More awesome fish](https://github.com/bucaran/awesome-fish)
 
 [FZF](https://github.com/junegunn/fzf)
 
-Install [QuickLook plugins](https://github.com/sindresorhus/quick-look-plugins)
+[QuickLook plugins](https://github.com/sindresorhus/quick-look-plugins):
 
 ``` bash
 brew tap caskroom/cask
