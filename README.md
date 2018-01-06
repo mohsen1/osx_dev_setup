@@ -23,6 +23,12 @@ brew install vifm
 brew install gnu-sed
 ```
 
+Change shell to fish 
+```
+sudo `which fish` >> /etc/shells
+chsh -s `which fish`
+```
+
 [Diff So Fancy](https://github.com/so-fancy/diff-so-fancy)
 
 [Oh my fish](https://github.com/oh-my-fish/oh-my-fish)
