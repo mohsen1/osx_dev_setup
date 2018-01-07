@@ -59,6 +59,13 @@ brew install brew-cask
 brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql webp-quicklook suspicious-package
 ```
 
+Add VSCode CLI function to `~/.config/fish/config.fish`:
+
+```fish
+function code
+  open -a "Visual Studio Code.app" $argv
+end
+```
 ### Add public keys to Github
 
 ### Update `.vim`
