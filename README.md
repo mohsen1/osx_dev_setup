@@ -63,7 +63,7 @@ Add VSCode CLI function to `~/.config/fish/config.fish`:
 
 ```fish
 function code
-  open -a "Visual Studio Code.app" ($argv or '.')
+  open -a "Visual Studio Code.app" $argv
 end
 ```
 ### Add public keys to Github
