@@ -28,8 +28,8 @@ brew install fish
 brew install vim
 brew install vifm
 brew install gnu-sed
-brww install gnupg
-brww install yarn 
+brew install gnupg
+brew install yarn 
 brew install fzf
 brew install fd
 brew install diff-so-fancy 
