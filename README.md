@@ -67,7 +67,14 @@ end
 
 ### Add public keys to Github
 
+```
+ssh-keygen -t rsa -b 4096 -C "me@azimi.me"
+cat ~/.ssh/id_rsa.pub | pbcopy 
+```
+Add it [here](https://github.com/settings/ssh/new)
+
 ### Add PGP keys to Github
+[Guide](https://help.github.com/articles/adding-a-new-gpg-key-to-your-github-account/)
 
 ### Update to proper Vim
 
