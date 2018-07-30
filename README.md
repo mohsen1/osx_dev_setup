@@ -81,7 +81,7 @@ Add it [here](https://github.com/settings/ssh/new)
 ```bash
 cd & cd Desktop
 git clone git@github.com:mohsen1/.vim.git
-cd .git
+cd .vim
 make
 cd .. & rm -rf .vim
 ```
