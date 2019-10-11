@@ -93,6 +93,12 @@ cd .. & rm -rf .vim
 git config --global diff.colorMoved zebra
 ```
 
+#### Remove prefixes
+
+```
+git config --global diff.noprefix true
+```
+
 #### checkout pull requests
 ```
 git config --global --add remote.origin.fetch "+refs/pull/*/head:refs/remotes/origin/pr/*"
