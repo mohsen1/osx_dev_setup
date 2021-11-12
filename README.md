@@ -114,3 +114,7 @@ git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
 ```
 git config --global alias.l "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 ```
+
+#### Install `fzf.fish`
+
+https://github.com/PatrickF1/fzf.fish
