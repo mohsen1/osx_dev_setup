@@ -118,3 +118,7 @@ git config --global alias.l "log --graph --pretty=format:'%Cred%h%Creset -%C(yel
 #### Install `fzf.fish`
 
 https://github.com/PatrickF1/fzf.fish
+
+
+#### Use gitstatus 
+https://github.com/romkatv/gitstatus
