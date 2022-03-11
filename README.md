@@ -41,7 +41,10 @@ sudo `which fish` >> /etc/shells
 chsh -s `which fish`
 ```
 
+https://github.com/PatrickF1/fzf.fish
+
 ### Install [Source Code Pro font](https://github.com/adobe-fonts/source-code-pro) for [Powerline](https://github.com/powerline/fonts) like a pro
+
 
 ```
 brew tap caskroom/fonts
