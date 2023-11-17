@@ -14,7 +14,6 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 ```bash
 brew install git
 brew install fish
-brew install vim
 brew install macvim
 brew install vifm
 brew install gnu-sed
