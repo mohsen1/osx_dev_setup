@@ -30,6 +30,9 @@ Volta.sh
 
 ```
 curl https://get.volta.sh | bash
+source ~/.config/fish/config.fish
+volta install node
+volta intall yarn
 ```
 
 ## Fish
