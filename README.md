@@ -54,7 +54,7 @@ brew cask install font-source-code-pro-for-powerline
 ### [QuickLook plugins](https://github.com/sindresorhus/quick-look-plugins):
 
 ``` bash
-brew tap caskroom/cask
+brew tap homebrew/cask-fonts
 brew install brew-cask
 brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql webp-quicklook suspicious-package
 ```
