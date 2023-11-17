@@ -26,6 +26,14 @@ brew install visual-studio-code
 brew install --cask caffeine
 ```
 
+Volta.sh
+
+```
+curl https://get.volta.sh | bash
+```
+
+## Fish
+
 ### Change the default shell to fish 
 ```
 echo $(which fish) | sudo tee -a /etc/shells && chsh -s $(which fish)
