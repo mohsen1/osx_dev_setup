@@ -32,7 +32,8 @@ brew install gnupg
 brew install yarn 
 brew install fzf
 brew install fd
-brew install diff-so-fancy 
+brew install diff-so-fancy
+brew install visual-studio-code
 ```
 
 ### Change shell to fish 
@@ -57,15 +58,6 @@ brew cask install font-source-code-pro-for-powerline
 brew tap homebrew/cask-fonts
 brew install brew-cask
 brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql webp-quicklook suspicious-package
-```
-
-### VSCode
-Add VSCode CLI function to `~/.config/fish/config.fish`:
-
-```fish
-function code
-  open -a "Visual Studio Code.app" $argv
-end
 ```
 
 ### Add public keys to Github
