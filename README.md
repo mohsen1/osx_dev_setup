@@ -88,11 +88,7 @@ Add it [here](https://github.com/settings/ssh/new)
 ### Update to proper Vim
 
 ```bash
-cd & cd Desktop
-git clone git@github.com:mohsen1/.vim.git
-cd .vim
-make
-cd .. & rm -rf .vim
+$ curl -L https://bit.ly/janus-bootstrap | bash
 ```
 
 ### Git stuff
