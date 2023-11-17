@@ -4,22 +4,9 @@ This is how I setup an OSX machine for devlopment. This is mainly a reminder for
 
 
 ## Essensial Apps
-* [Code](https://code.visualstudio.com)
-* [iTerm2](http://www.iterm2.com/)
 * [Homebrew](brew.sh) `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 * [Caffiene](http://lightheadsw.com/caffeine/)
 * [ShiftIt](https://code.google.com/p/shiftit/)
-* XCode
-* [Spotify](https://www.spotify.com/us/)
-
-
-## CLI Essensials
-* [fd](https://github.com/junegunn/fzf#respecting-gitignore)
-* [Diff So Fancy](https://github.com/so-fancy/diff-so-fancy)
-* [Oh my fish](https://github.com/oh-my-fish/oh-my-fish)
-* [Powerline](https://github.com/oh-my-fish/theme-bobthefish)
-* [More awesome fish](https://github.com/bucaran/awesome-fish)
-* [FZF](https://github.com/junegunn/fzf)
 
 
 ```bash
@@ -42,7 +29,33 @@ sudo `which fish` >> /etc/shells
 chsh -s `which fish`
 ```
 
-https://github.com/PatrickF1/fzf.fish
+#### Fish prompt
+
+Install Fisher 
+
+```
+curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
+```
+
+oh-my-fish
+
+```
+curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
+```
+
+theme
+
+```
+omf install bobthefish
+```
+
+[`fzf`](https://github.com/junegunn/fzf)
+
+```
+fisher install PatrickF1/fzf.fish
+```
+
+[More awesome fish](https://github.com/bucaran/awesome-fish)
 
 ### Install [Source Code Pro font](https://github.com/adobe-fonts/source-code-pro) for [Powerline](https://github.com/powerline/fonts) like a pro
 
