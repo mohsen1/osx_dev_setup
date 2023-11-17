@@ -3,11 +3,13 @@
 This is how I setup an OSX machine for devlopment. This is mainly a reminder for myself.
 
 
-## Essensial Apps
-* [Homebrew](brew.sh) `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
-* [Caffiene](http://lightheadsw.com/caffeine/)
-* [ShiftIt](https://code.google.com/p/shiftit/)
+## Homebrew
 
+Instal [Homebrew](brew.sh) 
+
+```
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
 
 ```bash
 brew install git
@@ -21,12 +23,12 @@ brew install fzf
 brew install fd
 brew install diff-so-fancy
 brew install visual-studio-code
+brew install --cask caffeine
 ```
 
-### Change shell to fish 
+### Change the default shell to fish 
 ```
-sudo `which fish` >> /etc/shells
-chsh -s `which fish`
+echo $(which fish) | sudo tee -a /etc/shells && chsh -s $(which fish)
 ```
 
 #### Fish prompt
@@ -57,7 +59,7 @@ fisher install PatrickF1/fzf.fish
 
 [More awesome fish](https://github.com/bucaran/awesome-fish)
 
-### Install [Source Code Pro font](https://github.com/adobe-fonts/source-code-pro) for [Powerline](https://github.com/powerline/fonts) like a pro
+#### Install [Source Code Pro font](https://github.com/adobe-fonts/source-code-pro) for [Powerline](https://github.com/powerline/fonts) like a pro
 
 
 ```
@@ -71,6 +73,7 @@ brew cask install font-source-code-pro-for-powerline
 brew install qlcolorcode qlstephen qlmarkdown quicklook-json qlimagesize suspicious-package apparency quicklookase qlvideo
 ```
 
+## Github
 ### Add public keys to Github
 
 ```
