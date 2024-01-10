@@ -74,8 +74,8 @@ fisher install PatrickF1/fzf.fish
 
 
 ```
-brew tap caskroom/fonts
-brew cask install font-source-code-pro-for-powerline
+brew tap homebrew/cask-fonts
+brew install font-source-code-pro-for-powerline
 ```
 
 ### [QuickLook plugins](https://github.com/sindresorhus/quick-look-plugins):
