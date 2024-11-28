@@ -74,7 +74,6 @@ fisher install PatrickF1/fzf.fish
 
 
 ```
-brew tap homebrew/cask-fonts
 brew install font-source-code-pro-for-powerline
 ```
 
