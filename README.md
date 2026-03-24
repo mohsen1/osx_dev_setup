@@ -1,139 +1,122 @@
-# OSX Development Setup
+# macOS Development Setup
 
-This is how I setup an OSX machine for devlopment. This is mainly a reminder for myself.
+Automated setup for a macOS dev machine. Run individual scripts or everything at once.
 
-
-## Homebrew
-
-Instal [Homebrew](brew.sh) 
-
-```
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-```
+## Quick Start (Fresh Machine)
 
 ```bash
-brew install git
-brew install fish
-brew install macvim
-brew install vifm
-brew install gnu-sed
-brew install gnupg
-brew install yarn 
-brew install fzf
-brew install fd
-brew install diff-so-fancy
-brew install visual-studio-code
-brew install --cask caffeine
+# Install Xcode Command Line Tools first
+xcode-select --install
+
+# Clone and run
+git clone https://github.com/mohsen1/osx_dev_setup.git
+cd osx_dev_setup
+chmod +x setup.sh scripts/*.sh
+./setup.sh all
 ```
 
-Volta.sh
-
-```
-curl https://get.volta.sh | bash
-source ~/.config/fish/config.fish
-volta install node
-volta intall yarn
-```
-
-## Fish
-
-### Change the default shell to fish 
-```
-echo $(which fish) | sudo tee -a /etc/shells && chsh -s $(which fish)
-```
-
-#### Fish prompt
-
-Install Fisher 
-
-```
-curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
-```
-
-oh-my-fish
-
-```
-curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
-```
-
-theme
-
-```
-omf install bobthefish
-```
-
-[`fzf`](https://github.com/junegunn/fzf)
-
-```
-fisher install PatrickF1/fzf.fish
-```
-
-[More awesome fish](https://github.com/bucaran/awesome-fish)
-
-#### Install [Source Code Pro font](https://github.com/adobe-fonts/source-code-pro) for [Powerline](https://github.com/powerline/fonts) like a pro
-
-
-```
-brew install font-source-code-pro-for-powerline
-```
-
-### [QuickLook plugins](https://github.com/sindresorhus/quick-look-plugins):
-
-``` bash
-brew install qlcolorcode qlstephen qlmarkdown quicklook-json qlimagesize suspicious-package apparency quicklookase qlvideo
-```
-
-## Github
-### Add public keys to Github
-
-```
-ssh-keygen -t rsa -b 4096 -C "me@azimi.me"
-cat ~/.ssh/id_rsa.pub | pbcopy 
-```
-Add it [here](https://github.com/settings/ssh/new)
-
-### Add PGP keys to Github
-[Guide](https://help.github.com/articles/adding-a-new-gpg-key-to-your-github-account/)
-
-### Update to proper Vim
+## Run Individual Scripts
 
 ```bash
-$ curl -L https://bit.ly/janus-bootstrap | bash
+./setup.sh brew        # Homebrew + formulae + casks
+./setup.sh macos       # macOS system preferences
+./setup.sh fish        # Fish shell + Fisher + bobthefish
+./setup.sh git         # Git global config
+./setup.sh ssh         # SSH keygen + GitHub upload via gh
+./setup.sh node        # Volta + Node.js + pnpm + yarn
+./setup.sh python      # uv + Python
+./setup.sh rust        # Rustup + rust-analyzer + clippy
+./setup.sh neovim      # Neovim + LazyVim + language extras
+./setup.sh ai-tools    # Claude Code, Codex CLI, Ollama
 ```
 
-### Git stuff
+Or combine: `./setup.sh brew git ssh`
 
-#### [Moved lines color](https://blog.github.com/2018-04-05-git-217-released/#coloring-moved-code)
-```
-git config --global diff.colorMoved zebra
-```
+---
 
-#### Remove prefixes
+## What Gets Installed
 
-```
-git config --global diff.noprefix true
-```
+### Homebrew Packages
 
-#### checkout pull requests
-```
-git config --global --add remote.origin.fetch "+refs/pull/*/head:refs/remotes/origin/pr/*"
-```
+**Core tools:** git, gh, coreutils, gnu-sed, fzf, fd, bat, ripgrep, tree, tmux, cloc, hyperfine
 
-#### Enable facy diff
-```
-git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
-```
+**Editors:** neovim, macvim, vifm
 
-#### Aliases
-**A better `git l`**
-```
-git config --global alias.l "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
-```
+**Languages & runtimes:**
+- **Node.js** via [Volta](https://volta.sh) — pnpm, yarn
+- **Rust** via [rustup](https://rustup.rs) — rust-analyzer, clippy, rustfmt, wasm-pack
+- **Python** via [uv](https://docs.astral.sh/uv/) — fast package manager + Python installer
+- **Deno** — TypeScript runtime
 
-#### Install `fzf.fish`
+**Containers:** docker, docker-compose, [OrbStack](https://orbstack.dev)
 
-https://github.com/PatrickF1/fzf.fish
+**Cloud & networking:** cloudflared, tailscale, azure-cli, gcloud-cli
 
+**AI tools:** [Claude Code](https://docs.anthropic.com/en/docs/claude-code), [Codex CLI](https://github.com/openai/codex), ollama
 
-#### Use gitstatus 
-https://github.com/romkatv/gitstatus
+**Other:** diff-so-fancy, git-filter-repo, ffmpeg, yt-dlp, yek, caffeine, keycastr
+
+### Shell: Fish + bobthefish
+
+- [Fish shell](https://fishshell.com) as default shell
+- [Fisher](https://github.com/jorgebucaran/fisher) plugin manager
+- [fzf.fish](https://github.com/PatrickF1/fzf.fish) — fuzzy search for files, history, git
+- [Oh My Fish](https://github.com/oh-my-fish/oh-my-fish) + [bobthefish](https://github.com/oh-my-fish/theme-bobthefish) theme
+- [Source Code Pro for Powerline](https://github.com/powerline/fonts) font
+
+### Git Config
+
+- `diff-so-fancy` as pager with colored moved-line detection
+- SSH hardening (timeout, keepalive)
+- Aliases: `git l` (graph log), `git st`, `git co`
+- Auto PR ref fetching (`git fetch` pulls PR branches)
+- `push.autoSetupRemote` for easy branch pushing
+
+### SSH
+
+- **Ed25519** key generation (replaces RSA — shorter, faster, more secure)
+- Automatic upload to GitHub via `gh ssh-key add`
+- macOS Keychain integration (`AddKeysToAgent`, `UseKeychain`)
+- GitHub SSH over port 443 (works on restrictive networks)
+- Connectivity verification
+
+### Neovim (LazyVim)
+
+- [LazyVim](https://www.lazyvim.org) distribution — batteries-included Neovim config
+- **LSP** via mason.nvim — auto-installs language servers
+- **Completion** via blink.cmp — fast, fuzzy
+- **Treesitter** — syntax highlighting, text objects
+- **Telescope** — fuzzy file/grep/symbol search
+- Pre-configured extras: TypeScript, Rust, Python, JSON, YAML, TOML, Markdown
+- `vim`/`vi` aliased to `nvim` in fish
+
+### macOS Defaults
+
+- **Dock:** autohide, size 72, no recents, no launch animation
+- **Finder:** show hidden files, all extensions, path bar, status bar, POSIX title path
+- **Keyboard:** fast repeat (2/15), disable auto-correct/capitalize/smart quotes
+- **Trackpad:** three-finger drag, tap to click
+- **Screenshots:** save to `~/Screenshots`, PNG, no shadow
+- **Misc:** no quarantine dialog, expand save/print panels, no .DS_Store on network/USB
+
+---
+
+## Post-Setup
+
+1. **Restart terminal** to activate fish shell
+2. **Run `nvim`** once — plugins auto-install on first launch
+3. **Authenticate CLI tools:**
+   ```bash
+   claude          # follow prompts for Anthropic auth
+   gh auth login   # if not done during SSH setup
+   ```
+4. **Set API keys** in `~/.config/fish/config.fish`:
+   ```fish
+   set -gx OPENAI_API_KEY "..."
+   ```
+5. **Download Codex desktop app** from [openai.com/index/codex](https://openai.com/index/codex/)
+6. **Start Tailscale:** open the Tailscale menu bar app or `tailscale up`
+
+## Customizing
+
+Each script in `scripts/` is standalone and idempotent — safe to re-run. Edit them to match your preferences before running.
