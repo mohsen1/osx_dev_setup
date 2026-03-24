@@ -101,21 +101,33 @@ Or combine: `./setup.sh brew git ssh`
 
 ---
 
-## Post-Setup
+## Post-Setup (Manual Steps)
 
-1. **Restart terminal** to activate fish shell
-2. **Run `nvim`** once — plugins auto-install on first launch
-3. **Authenticate CLI tools:**
+These steps require a password or interactive input and must be done manually:
+
+1. **Set fish as default shell:**
+   ```bash
+   echo /opt/homebrew/bin/fish | sudo tee -a /etc/shells
+   chsh -s /opt/homebrew/bin/fish
+   ```
+2. **Upload SSH key to GitHub** (if the script couldn't due to missing scope):
+   ```bash
+   gh auth refresh -h github.com -s admin:public_key
+   gh auth setup-git
+   ```
+3. **Restart terminal** to activate fish shell
+4. **Run `nvim`** once — plugins auto-install on first launch
+5. **Authenticate CLI tools:**
    ```bash
    claude          # follow prompts for Anthropic auth
    gh auth login   # if not done during SSH setup
    ```
-4. **Set API keys** in `~/.config/fish/config.fish`:
+6. **Set API keys** in `~/.config/fish/config.fish`:
    ```fish
    set -gx OPENAI_API_KEY "..."
    ```
-5. **Download Codex desktop app** from [openai.com/index/codex](https://openai.com/index/codex/)
-6. **Start Tailscale:** open the Tailscale menu bar app or `tailscale up`
+7. **Download Codex desktop app** from [openai.com/index/codex](https://openai.com/index/codex/)
+8. **Start Tailscale:** open the Tailscale menu bar app or `tailscale up`
 
 ## Customizing
 

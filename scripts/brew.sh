@@ -27,4 +27,7 @@ brew install --cask \
     font-source-code-pro-for-powerline gcloud-cli \
     2>&1 | grep -v "already installed" || true
 
+echo "==> Launching OrbStack (provides Docker)..."
+open -a OrbStack
+
 echo "==> Brew setup complete."
