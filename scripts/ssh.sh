@@ -40,8 +40,13 @@ if gh ssh-key list 2>/dev/null | grep -qF "$(echo "$PUB_KEY" | awk '{print $2}')
     echo "    SSH key already registered on GitHub."
 else
     echo "    Adding key to GitHub as '$KEY_TITLE'..."
-    gh ssh-key add "${KEY_FILE}.pub" --title "$KEY_TITLE" --type authentication
-    echo "    SSH key added to GitHub."
+    if gh ssh-key add "${KEY_FILE}.pub" --title "$KEY_TITLE" --type authentication; then
+        echo "    SSH key added to GitHub."
+    else
+        echo "    WARNING: Failed to upload SSH key to GitHub."
+        echo "    You may need to run: gh auth refresh -h github.com -s admin:public_key"
+        echo "    Then: gh ssh-key add ${KEY_FILE}.pub --title '$KEY_TITLE' --type authentication"
+    fi
 fi
 
 echo "==> Writing SSH config..."

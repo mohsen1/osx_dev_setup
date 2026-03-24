@@ -49,6 +49,8 @@ eval ($BREW_PREFIX/bin/brew shellenv)
 
 if status is-interactive
     fish_add_path $HOME/.volta/bin
+    fish_add_path $HOME/.local/bin
+    fish_add_path $HOME/.cargo/bin
 
     set -gx PNPM_HOME "\$HOME/Library/pnpm"
     fish_add_path --append -g \$PNPM_HOME
@@ -62,6 +64,7 @@ alias vim nvim
 alias vi nvim
 
 source ~/.orbstack/shell/init2.fish 2>/dev/null; or true
+source "\$HOME/.cargo/env.fish" 2>/dev/null; or true
 FISHCONF
 
 echo "==> Fish setup complete. Restart your terminal."
